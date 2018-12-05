@@ -1,6 +1,9 @@
 import React from 'react'
 import { Link } from 'gatsby'
 
+import 'typeface-montserrat'
+import 'typeface-merriweather'
+
 import { rhythm, scale } from '../utils/typography'
 
 class Layout extends React.Component {
@@ -13,9 +16,11 @@ class Layout extends React.Component {
       header = (
         <h1
           style={{
-            ...scale(1.5),
+            ...scale(0.6),
             marginBottom: rhythm(1.5),
             marginTop: 0,
+            textTransform: 'uppercase',
+            fontWeight: 600,
           }}
         >
           <Link
@@ -34,9 +39,12 @@ class Layout extends React.Component {
       header = (
         <h3
           style={{
+            ...scale(0.6),
             fontFamily: 'Montserrat, sans-serif',
             marginTop: 0,
             marginBottom: rhythm(-1),
+            textTransform: 'uppercase',
+            fontWeight: 600,
           }}
         >
           <Link
