@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
+import styles from "./layout.module.css"
 
 import 'typeface-montserrat'
 import 'typeface-merriweather'
@@ -14,50 +15,31 @@ class Layout extends React.Component {
 
     if (location.pathname === rootPath) {
       header = (
-        <h1
-          style={{
-            ...scale(0.6),
-            marginBottom: rhythm(1.5),
-            marginTop: 0,
-            textTransform: 'uppercase',
-            fontWeight: 600,
-          }}
-        >
+        <h1 className={styles.siteTitle}>
           <Link
-            style={{
-              boxShadow: 'none',
-              textDecoration: 'none',
-              color: 'inherit',
-            }}
+            className={styles.siteTitleLink}
             to={'/'}
           >
-            {title}
+            <span className={styles.sam}>
+              Sam
+            </span>
+            Hermes
           </Link>
         </h1>
       )
     } else {
       header = (
-        <h3
-          style={{
-            ...scale(0.6),
-            fontFamily: 'Montserrat, sans-serif',
-            marginTop: 0,
-            marginBottom: rhythm(-1),
-            textTransform: 'uppercase',
-            fontWeight: 600,
-          }}
-        >
+        <p className={styles.siteTitle}>
           <Link
-            style={{
-              boxShadow: 'none',
-              textDecoration: 'none',
-              color: 'inherit',
-            }}
+            className={styles.siteTitleLink}
             to={'/'}
           >
-            {title}
+            <span className={styles.sam}>
+              Sam
+            </span>
+            Hermes
           </Link>
-        </h3>
+        </p>
       )
     }
     return (
@@ -66,6 +48,7 @@ class Layout extends React.Component {
           marginLeft: 'auto',
           marginRight: 'auto',
           maxWidth: rhythm(24),
+          width: '85%',
           padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
         }}
       >

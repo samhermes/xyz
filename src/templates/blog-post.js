@@ -19,13 +19,17 @@ class BlogPostTemplate extends React.Component {
           meta={[{ name: 'description', content: siteDescription }]}
           title={`${post.frontmatter.title} | ${siteTitle}`}
         />
-        <h1>{post.frontmatter.title}</h1>
+        <h1
+          style={{
+            fontFamily: 'Merriweather, Georgia, serif',
+          }}
+        >{post.frontmatter.title}</h1>
         <p
           style={{
             ...scale(-1 / 5),
             display: 'block',
-            marginBottom: rhythm(1),
-            marginTop: rhythm(-1),
+            marginBottom: rhythm(1.5),
+            marginTop: rhythm(-0.6),
           }}
         >
           {post.frontmatter.date}
